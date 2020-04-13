@@ -1,0 +1,67 @@
+function AddPrefix(prefix) {
+  return function(name) {
+
+    return prefix + " " + name;
+  }
+};
+
+const fullname = AddPrefix(sir)(geoff);
+
+Problem #1
+Use a closure to create multiple functions for adding a prefix to a name. The prefix could be Doctor, Duchess, Sir, and so on.
+
+It should be possible to create a new prefix function like this:
+
+const prefixSir = addPrefix("Sir");
+-------------------------------------------------------------
+
+function animalSounder(animal) {
+  return (sound) => {
+    return `A ${animal} says ${sound}!`
+  }
+}
+
+animalSounder("mouse")("squeak");
+
+Problem #\
+Use a closure to create multiple functions for making various animal noises. For example, it should be possible to do the following:
+
+const lionSound = soundMaker("roar");
+const mouseSound = soundMaker("squeak");
+
+--------------------------------------------------------------
+Problem #3
+Use closures to create multiple functions for adding both a prefix and a suffix to a name. For example, it should be possible to do the following:
+
+const misterJunior = nameEnhancer("Mister")("Junior");
+const duchessThird = nameEnhancer("Duchess")("The Third");
+
+function nameEnhancer(name) {
+  return (prefix) => {
+    return (suffix) => {
+      return `${prefix} ${name} ${suffix}`;
+    }
+  }
+}
+
+const QUEEN = nameEnhancer("Michelle")("Ms.")(✨"The Queen"✨); 
+
+-----------------------------------------------------------------
+Problem#4
+Use closures to create multiple functions to first add to and then multiply a value. It should be possible to do the followin
+const addTwoMultiplyByThree = addaMult(2)(3);
+const addFiveMultiplyByNine = addaMult(5)(9);
+
+"function Add(x) {
+  return (y) {                        <------- Incorrect
+    return x * y
+  }
+}"
+
+function AddThenMultiply(incrementer) {
+  return (multiplier) => {
+    return (number) => {                                 <------ Much better
+      return (number + incrementer) * multiplier;
+    }
+  }
+}

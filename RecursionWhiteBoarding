@@ -1,0 +1,30 @@
+Problem #1
+Write a recursive function that reverses the order of words in a sentence. For instance, "I am a cat" should become "cat a am I".
+
+const reversion = funcion(stringSentence){
+  if (string === "") {
+    return "";
+  else{
+    const sentenceArr = stringsentence.split(" ");
+    const reversedArr = [];
+    sentenceArr[-1].push(reverseArr);
+    return reversion
+    //return reversedArr.toString();
+  }
+}
+
+reversedArr[cat]
+sentenceArr[i am]
+
+
+reversion("I am cat");
+
+reversion(){
+  return "cat";
+  reversion(){
+    return "am";
+    reversion(){
+      return "I";
+    }
+  }
+}
